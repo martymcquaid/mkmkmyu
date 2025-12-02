@@ -1,14 +1,13 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Home(): JSX.Element {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white'>
-      <header className='sticky top-0 z-50 bg-black/60'>
+      <header className='sticky top-0 z-50 bg-black/60 backdrop-blur-md'>
         <div className='max-w-7xl mx-auto px-6 py-4 flex items-center justify-between'>
           <div className='flex items-center space-x-2'>
             <span className='w-8 h-8 bg-[#C9A66B] rounded-full' aria-label='logo' />
-            <span className='font-semibold'>Heritage Barbers</span>
+            <span className='font-semibold' style={{ fontFamily: 'Georgia, serif' }}>Heritage Barbers</span>
           </div>
           <nav className='hidden md:flex space-x-4'>
             <Link to='/'>Home</Link>
@@ -23,11 +22,11 @@ export default function Home(): JSX.Element {
 
       <section className='h-72 flex items-center justify-center'>
         <div className='text-center'>
-          <h1 className='text-4xl font-bold'>Traditional Barbering. Modern Style.</h1>
-          <p className='mt-2'>Classic cuts, sharp shaves, and authentic craftsmanship.</p>
-          <div className='mt-4'>
-            <Link to='/booking' className='mr-2 bg-[#8B1E23] px-4 py-2 rounded'>Book Appointment</Link>
-            <Link to='/services' className='ml-2 border border-white px-4 py-2 rounded'>View Services</Link>
+          <h1 className='text-4xl md:text-5xl font-serif font-bold mb-2'>Traditional Barbering. Modern Style.</h1>
+          <p className='text-slate-200'>Classic cuts, sharp shaves, and authentic craftsmanship.</p>
+          <div className='mt-4 space-x-3'>
+            <Link to='/booking' className='bg-[#8B1E23] hover:bg-[#A31E25] px-4 py-2 rounded'>Book Appointment</Link>
+            <Link to='/services' className='border border-white px-4 py-2 rounded'>View Services</Link>
           </div>
         </div>
       </section>
